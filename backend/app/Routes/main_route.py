@@ -12,7 +12,7 @@ def index():
 
 student_bp = Blueprint('students', __name__)
 
-@student_bp.route('/students')
+@student_bp.route('/students', methods=['GET'])
 def get_all_students():
     products = read_student()
     return jsonify(products)
